@@ -1,12 +1,19 @@
-<ng-container  *ngFor="let overview of dashboardOverview | async">
-  <mat-card >
-    <mat-card-header>
-      <div mat-card-avatar><mat-icon>{{ overview.typeIcon }}</mat-icon></div>
-      <mat-card-title>{{ overview.typeName }}</mat-card-title>
-      <mat-card-subtitle>{{ overview.showDollarSign ? '$' : '' }}{{ overview.value }}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-     <span>{{ overview.deltaPercent }}% {{ overview.deltaPeriod }}</span>
-    </mat-card-content>
-  </mat-card>
-</ng-container>
+<div class="dashboard-overview">
+  <ng-container *ngFor="let overview of dashboardOverview | async">
+    <mat-card>
+      <mat-card-header>
+        <div class="icon-container" mat-card-avatar>
+          <mat-icon>{{ overview.typeIcon }}</mat-icon>
+        </div>
+        <mat-card-title>{{ overview.typeName }}</mat-card-title>
+        <mat-card-subtitle
+          >{{ overview.showDollarSign ? "$" : ""
+          }}{{ overview.value }}</mat-card-subtitle
+        >
+      </mat-card-header>
+      <mat-card-content>
+        <span>{{ overview.deltaPercent }}% {{ overview.deltaPeriod }}</span>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>

@@ -1,0 +1,27 @@
+.dashboard-overview {
+  //   background-color: coral;
+  display: flex;
+  justify-content: space-between;
+  mat-card {
+    background-color: aqua;
+    width: 24%;
+    border-radius: 0.5rem;
+    position: relative;
+    box-shadow: 0 2px rgba(0, 0, 0, 0.3);
+    mat-card-header {
+      background-color: brown;
+      border-radius: 0.5rem 0.5rem 0 0;
+
+      .icon-container {
+        background-color: chartreuse;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: -10px;
+        left: 10px;
+        border-radius: 0.5rem;
+      }
+    }
+  }
+}

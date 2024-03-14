@@ -1,0 +1,12 @@
+.dashboard-container {
+  background-color: aquamarine;
+  padding: 15px;
+  .views-and-sales {
+    display: flex;
+    justify-content: space-between;
+    app-website-views-overview,
+    app-daily-sales-overview {
+      width: 49.2%;
+    }
+  }
+}
